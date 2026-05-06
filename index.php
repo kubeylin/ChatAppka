@@ -1,15 +1,17 @@
+<?php include "databaza.php"; ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Evidencia hier</title>
 </head>
 <body>
-    <h1>TEST</h1>
-    <?php
-echo"hello svet"
-echo"nemam rad php"
-    ?>
+
+<h1>Evidencia hier</h1>
+
+<a href="add.php">Pridať hru</a>
+
+<p>Zoznam hier sa zobrazí tu...</p>
+
 </body>
 </html>
