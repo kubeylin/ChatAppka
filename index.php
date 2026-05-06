@@ -9,6 +9,7 @@
     <h1>TEST</h1>
     <?php
 echo"hello svet"
+echo"nemam rad php"
     ?>
 </body>
 </html>
