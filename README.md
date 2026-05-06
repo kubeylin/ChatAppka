@@ -13,5 +13,5 @@ Webová aplikácia na evidenciu videohier.
 - vytvorená štruktúra
 - databáza vytvorená v PHP (mysqli)
 
-## Autor
-[Tvoje meno]
+## Autori
+Jakub Uhrin, Jakub Kubala
