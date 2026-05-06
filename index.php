@@ -7,5 +7,8 @@
 </head>
 <body>
     <h1>TEST</h1>
+    <?php
+echo"hello svet"
+    ?>
 </body>
 </html>
