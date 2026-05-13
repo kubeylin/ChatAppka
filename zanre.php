@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Kontrola duplicity
             $dup = mysqli_fetch_assoc(mysqli_query($conn, "SELECT id FROM zanre WHERE nazov='$n'"));
             if ($dup) {
-                $chyby[] = "Žáner „$nazov" už existuje.";
+                $chyby[] = "Žáner \"$nazov\" už existuje.";
             } else {
                 mysqli_query($conn, "INSERT INTO zanre (nazov, popis) VALUES ('$n','$p')");
                 header('Location: zanre.php?msg=pridany');
