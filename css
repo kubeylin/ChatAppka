@@ -1,0 +1,172 @@
+/* ================================================
+   Evidencia hier – vlastne styly
+   ================================================ */
+
+:root {
+    --nav-bg:      #0d0d1a;
+    --primary:     #7c3aed;      /* fialova */
+    --primary-dk:  #5b21b6;
+    --accent:      #06b6d4;      /* cyan */
+    --success:     #10b981;
+    --warning:     #f59e0b;
+    --danger:      #ef4444;
+    --bg:          #f3f4f6;
+    --card:        #ffffff;
+    --border:      #e5e7eb;
+    --text:        #111827;
+    --muted:       #6b7280;
+}
+
+/* ---- ZAKLAD ---- */
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main { flex: 1; }
+
+/* ---- NAVBAR ---- */
+.navbar {
+    background: var(--nav-bg) !important;
+    box-shadow: 0 2px 16px rgba(124,58,237,.35);
+}
+
+.navbar-brand { font-size: 1.3rem; letter-spacing: .5px; }
+
+.navbar .nav-link { border-radius: 6px; padding: .4rem .75rem; transition: background .15s; }
+.navbar .nav-link:hover  { background: rgba(255,255,255,.08); }
+.navbar .nav-link.active { background: var(--primary); color: #fff !important; font-weight: 600; }
+
+/* ---- STATISTIKY ---- */
+.stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1rem;
+    text-align: center;
+    border-top: 4px solid var(--primary);
+    transition: transform .2s;
+}
+.stat-card:hover { transform: translateY(-2px); }
+.stat-card .num  { font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+.stat-card .lbl  { font-size: .78rem; color: var(--muted); margin-top: .25rem; }
+
+/* ---- KARTA HRY ---- */
+.game-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s, box-shadow .2s;
+}
+.game-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(124,58,237,.18);
+}
+
+.game-thumb {
+    height: 130px;
+    background: linear-gradient(135deg, #1e1b4b, #312e81);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: rgba(255,255,255,.25);
+    position: relative;
+    flex-shrink: 0;
+}
+.game-thumb.played { background: linear-gradient(135deg, #064e3b, #065f46); }
+
+.platform-tag {
+    position: absolute;
+    bottom: 6px; right: 8px;
+    background: rgba(0,0,0,.6);
+    color: #e5e7eb;
+    font-size: .62rem;
+    padding: 2px 7px;
+    border-radius: 20px;
+    max-width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.game-body { padding: .85rem; flex: 1; display: flex; flex-direction: column; }
+
+.badge-zanr {
+    background: var(--primary);
+    color: #fff;
+    font-size: .68rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.game-title { font-size: .92rem; font-weight: 700; margin: .35rem 0 .2rem; line-height: 1.3; }
+
+.stars { color: var(--warning); font-size: .85rem; }
+.stars .empty { color: #d1d5db; }
+
+.playtime { font-size: .78rem; color: var(--muted); }
+.playtime i { color: var(--danger); }
+
+/* ---- FORMULAROVA KARTA ---- */
+.form-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,.06);
+}
+
+.form-label { font-weight: 600; font-size: .85rem; color: #374151; }
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(124,58,237,.15);
+}
+
+/* ---- TLACIDLA ---- */
+.btn-primary   { background: var(--primary);  border-color: var(--primary); }
+.btn-primary:hover { background: var(--primary-dk); border-color: var(--primary-dk); }
+
+/* ---- DETAIL HLAVICKA ---- */
+.detail-hero {
+    background: linear-gradient(135deg, #0d0d1a, #1e1b4b);
+    color: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.detail-icon {
+    width: 90px; height: 120px;
+    background: rgba(255,255,255,.1);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+/* ---- TABULKA ZANROV ---- */
+.table-zanre thead th { background: var(--nav-bg); color: #fff; border: none; }
+
+/* ---- FOOTER ---- */
+footer { background: var(--card); }
+
+/* ---- ANIMACIA ---- */
+.alert { animation: fadeIn .3s ease; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
